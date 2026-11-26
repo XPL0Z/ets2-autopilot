@@ -88,7 +88,7 @@ Every run writes a CSV log (`drive_YYYYMMDD_HHMMSS.csv`) with the prediction, st
 ## Roadmap
 
 - [ ] **Direct input plugin.** Write an SCS SDK *input* plugin (`scs_input_init`) that registers a virtual device whose axes are fed from shared memory. That gives absolute, exact steering with no controller emulation.
-- [ ] **Own recordings.** A recorder for screen capture and telemetry, with lane assist off.
+- [ ] **Own recordings.** A recorder for screen capture and telemetry, with lane assist off, plus a contribution guide so others can share data.
 - [ ] **Pretrained backbone.** Compare ResNet-18 / MobileNetV3 (ImageNet) against the PilotNet baseline.
 - [ ] **Multi-view input.** Use ETS2's custom multi-monitor mode (`r_multimon_mode 4`, `multimon` console command, `camera_space_offset`) to render a bumper camera and blind-spot views next to the driver's view, then feed them to a multi-branch network.
 - [ ] **Temporal context** (frame stacking or a GRU), then throttle and brake outputs.
@@ -105,6 +105,23 @@ figures/          plots used in this README
 ```
 
 The dataset and extracted data are not included. They are tens of GB, and the dataset has its own license on Hugging Face.
+
+## Contributing
+
+Contributions are very welcome, **especially driving data**. Better data is what this project needs most. The current model learns from a dataset recorded with ETS2's lane assist on. Human driving recorded with lane assist off would make a real difference, as would varied roads, weather, night driving, trucks and camera setups.
+
+Other welcome contributions:
+
+- the SCS SDK input plugin for direct steering (see the [Roadmap](#roadmap));
+- model experiments (pretrained backbones, temporal context, multi-view);
+- testing `drive.py` on other setups and reporting how it behaves;
+- bug reports and fixes.
+
+**A contribution guide is coming soon.** It will cover how to record data in the expected format, which game settings to use, and how to share recordings. Until then, feel free to open an issue to say what you would like to work on, or to share data you already have.
+
+## License
+
+The code is released under the [MIT License](LICENSE). The dataset is not part of this repository and keeps its own license.
 
 ## Acknowledgements
 
