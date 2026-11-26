@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+.venv/
+
+# Dataset and extracted data (tens of GB, see README)
+ets2-dataset/
+data/
+
+# Training logs and local experiments
+models/*.log
+models/pilotnet_cpu_16sessions.pt
+
+# Files written by drive.py at runtime
+calibration*.json
+drive_*.csv
+check_*.jpg
+
+# Course deliverables (French, kept outside the repo)
+*.pdf
+rapport.md
+figures/erreur_*.png
+figures/surapprentissage.png

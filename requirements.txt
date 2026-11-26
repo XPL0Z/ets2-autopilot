@@ -1,0 +1,12 @@
+numpy
+opencv-python-headless
+matplotlib        # plots (plot_history.py)
+
+# In-game driving (drive.py, Windows only)
+mss               # screen capture
+vgamepad          # virtual Xbox controller (installs the ViGEmBus driver)
+
+# PyTorch: install separately depending on the machine
+#   NVIDIA GPU (Windows/Linux): pip install torch --index-url https://download.pytorch.org/whl/cu130
+#     (do NOT add --extra-index-url for PyPI: pip would pick the newer CPU-only build)
+#   CPU only                  : pip install torch --index-url https://download.pytorch.org/whl/cpu
